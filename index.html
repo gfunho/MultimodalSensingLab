@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimodal Sensing Lab | University of Oulu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .hero-bg {
+            background: linear-gradient(rgba(0, 42, 92, 0.9), rgba(0, 86, 179, 0.85)), url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        /* Oulu-ish Blue Accents */
+        .text-oulu { color: #0056b3; }
+        .bg-oulu { background-color: #0056b3; }
+        .border-oulu { border-color: #0056b3; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <i class="fas fa-wave-square text-oulu text-3xl mr-3"></i>
+                    <div>
+                        <h1 class="font-bold text-xl tracking-tight text-gray-900">Multimodal Sensing Lab</h1>
+                        <p class="text-xs text-gray-500">University of Oulu</p>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-gray-600 hover:text-oulu font-medium transition">About</a>
+                    <a href="#themes" class="text-gray-600 hover:text-oulu font-medium transition">Research Themes</a>
+                    <a href="#achievements" class="text-gray-600 hover:text-oulu font-medium transition">Achievements</a>
+                    <a href="#publications" class="text-gray-600 hover:text-oulu font-medium transition">Publications</a>
+                    <a href="#contact" class="px-5 py-2 bg-oulu text-white rounded-full font-medium hover:bg-blue-800 transition shadow-lg">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-bg h-screen flex items-center justify-center text-white relative pt-20">
+        <div class="text-center px-4 max-w-4xl mx-auto">
+            <div class="mb-6 inline-block px-4 py-1 border border-blue-300 rounded-full bg-blue-900 bg-opacity-50 text-sm font-semibold tracking-wide uppercase backdrop-blur-sm">
+                Bridging Sensing & Intelligence
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                Perceiving the World <br> Through <span class="text-blue-300">Multimodal Data</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-10 font-light text-blue-100 max-w-3xl mx-auto">
+                We fuse vision, radio, and physiological signals to create intelligent systems for health, 6G, and robotics.
+            </p>
+            <div class="flex justify-center gap-4">
+                <a href="#themes" class="px-8 py-4 bg-white text-blue-900 font-bold rounded-lg shadow-xl hover:bg-blue-50 transition transform hover:-translate-y-1">
+                    Our Research
+                </a>
+                <a href="#publications" class="px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-blue-900 transition transform hover:-translate-y-1">
+                    Latest Papers
+                </a>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-2xl text-blue-200"></i>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-oulu font-bold text-sm uppercase tracking-wider mb-2">The Lab</h2>
+                    <h3 class="text-4xl font-bold text-gray-900 mb-6">Bridging the Gap Between <br> Sensing & Intelligence</h3>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        The <strong>Multimodal Sensing Lab (MSL)</strong>, led by <strong>Prof. Miguel Bordallo López</strong>, is an interdisciplinary research group at the University of Oulu.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        We focus on creating intelligent systems that fuse data from disparate sensing modalities—primarily <strong>vision, radio (RF), and physiological signals</strong>—to derive robust and actionable insights. Our work spans the entire pipeline, from novel data acquisition and hardware implementation to advanced signal processing and deep learning.
+                    </p>
+                    
+                    <!-- Stats -->
+                    <div class="grid grid-cols-3 gap-8 border-t pt-8">
+                        <div>
+                            <span class="block text-4xl font-bold text-oulu">150+</span>
+                            <span class="text-sm text-gray-500 font-medium">Publications</span>
+                        </div>
+                        <div>
+                            <span class="block text-4xl font-bold text-oulu">4</span>
+                            <span class="text-sm text-gray-500 font-medium">Core Themes</span>
+                        </div>
+                        <div>
+                            <span class="block text-4xl font-bold text-oulu">2025</span>
+                            <span class="text-sm text-gray-500 font-medium">Cutting Edge</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-blue-100 rounded-2xl transform rotate-3"></div>
+                    <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Lab Research" class="relative rounded-2xl shadow-2xl w-full h-auto object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Themes -->
+    <section id="themes" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Key Research Themes</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Our work is organized into four primary pillars of innovation.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Theme 1 -->
+                <div class="bg-white rounded-xl p-8 shadow-lg card-hover border-t-4 border-oulu">
+                    <div class="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center text-oulu text-2xl mb-6">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Remote Health & Biosignals</h3>
+                    <p class="text-gray-600">Non-invasive, contactless monitoring of physiological signals (rPPG, respiration) for healthcare diagnostics and well-being.</p>
+                </div>
+
+                <!-- Theme 2 -->
+                <div class="bg-white rounded-xl p-8 shadow-lg card-hover border-t-4 border-purple-600">
+                    <div class="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center text-purple-600 text-2xl mb-6">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">6G & Digital Twinning</h3>
+                    <p class="text-gray-600">Convergence of communication and sensing (JCAS) to create high-fidelity, radio-compatible Digital Twins using ray tracing.</p>
+                </div>
+
+                <!-- Theme 3 -->
+                <div class="bg-white rounded-xl p-8 shadow-lg card-hover border-t-4 border-green-600">
+                    <div class="w-14 h-14 bg-green-100 rounded-lg flex items-center justify-center text-green-600 text-2xl mb-6">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Robotics & Vision</h3>
+                    <p class="text-gray-600">Robust 3D reconstruction, kinematic analysis, and signal processing for autonomous systems and industrial automation.</p>
+                </div>
+
+                <!-- Theme 4 -->
+                <div class="bg-white rounded-xl p-8 shadow-lg card-hover border-t-4 border-orange-500">
+                    <div class="w-14 h-14 bg-orange-100 rounded-lg flex items-center justify-center text-orange-500 text-2xl mb-6">
+                        <i class="fas fa-fingerprint"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Identity & Biometrics</h3>
+                    <p class="text-gray-600">Advanced analysis of human faces for kinship verification, affective computing, and psychological assessment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Achievements -->
+    <section id="achievements" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <div class="space-y-8">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Top Innovations &<br>Impact</h2>
+                    <p class="text-lg text-gray-600">
+                        Our lab has consistently pushed the boundaries of what is possible with non-contact sensing, from diagnosing depression via video to turning Wi-Fi signals into 3D cameras.
+                    </p>
+                    <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-oulu">
+                        <p class="italic text-gray-700">
+                            "We don't just analyze data; we create new ways for machines to perceive the world."
+                        </p>
+                        <p class="mt-4 font-bold text-gray-900">- Miguel Bordallo López</p>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <!-- Item 1 -->
+                    <div class="flex group">
+                        <div class="flex-shrink-0 mr-4">
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-oulu font-bold group-hover:bg-oulu group-hover:text-white transition">01</div>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Radio Propagation as a Service (2025)</h4>
+                            <p class="text-gray-600">Pioneered <strong>Differentiable Ray Tracing</strong> with point clouds, allowing camera data to directly and accurately simulate radio channels for 6G.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="flex group">
+                        <div class="flex-shrink-0 mr-4">
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-oulu font-bold group-hover:bg-oulu group-hover:text-white transition">02</div>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Vision from Wi-Fi (2025)</h4>
+                            <p class="text-gray-600">Created <strong>CSI2Depth</strong>, a method to generate 3D point clouds and depth maps solely from Wi-Fi signals using Transformers.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="flex group">
+                        <div class="flex-shrink-0 mr-4">
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-oulu font-bold group-hover:bg-oulu group-hover:text-white transition">03</div>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Contactless Depression Detection (2023)</h4>
+                            <p class="text-gray-600">First large-scale demonstration of using rPPG (video-based heart activity) as the primary signal for diagnosing depression.</p>
+                        </div>
+                    </div>
+                    
+                     <!-- Item 4 -->
+                     <div class="flex group">
+                        <div class="flex-shrink-0 mr-4">
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-oulu font-bold group-hover:bg-oulu group-hover:text-white transition">04</div>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Unsupervised Bio-Signal Extraction (2023)</h4>
+                            <p class="text-gray-600">Developed <strong>Face2PPG</strong>, an unsupervised pipeline removing the need for medical ground truth data in training remote health models.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications -->
+    <section id="publications" class="py-24 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Recent Publications</h2>
+                    <p class="text-gray-400">Highlights from our 2025 research output.</p>
+                </div>
+                <a href="#" class="hidden md:inline-block text-oulu hover:text-white transition font-semibold">View Google Scholar <i class="fas fa-arrow-right ml-2"></i></a>
+            </div>
+
+            <div class="grid gap-6">
+                <!-- Pub 1 -->
+                <div class="bg-gray-800 p-6 rounded-lg hover:bg-gray-750 transition border-l-4 border-blue-500">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <span class="text-xs font-bold bg-blue-900 text-blue-200 px-2 py-1 rounded mb-3 inline-block">NeurIPS 2025</span>
+                            <h3 class="text-lg font-bold mb-2">APML: Adaptive Probabilistic Matching Loss for Robust 3D Point Cloud Reconstruction</h3>
+                            <p class="text-sm text-gray-400 mb-2">S Sharifipour, C Álvarez Casado, M Sabokrou, M Bordallo López</p>
+                        </div>
+                        <i class="fas fa-file-alt text-gray-600 text-xl"></i>
+                    </div>
+                </div>
+
+                <!-- Pub 2 -->
+                <div class="bg-gray-800 p-6 rounded-lg hover:bg-gray-750 transition border-l-4 border-purple-500">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <span class="text-xs font-bold bg-purple-900 text-purple-200 px-2 py-1 rounded mb-3 inline-block">Neural Networks 2025</span>
+                            <h3 class="text-lg font-bold mb-2">Alzheimer’s disease classification based on multimodal consistent distribution and trusted fusion</h3>
+                            <p class="text-sm text-gray-400 mb-2">X Kui, Y Dai, B Zou, C Zhu, Z Li, Y., Ji, L Chen, M Bordallo López</p>
+                        </div>
+                        <i class="fas fa-file-alt text-gray-600 text-xl"></i>
+                    </div>
+                </div>
+
+                <!-- Pub 3 -->
+                <div class="bg-gray-800 p-6 rounded-lg hover:bg-gray-750 transition border-l-4 border-green-500">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <span class="text-xs font-bold bg-green-900 text-green-200 px-2 py-1 rounded mb-3 inline-block">TechRxiv 2025</span>
+                            <h3 class="text-lg font-bold mb-2">Beyond 6G: Multimodal Approaches for Joint Communication and Sensing</h3>
+                            <p class="text-sm text-gray-400 mb-2">M Bordallo López</p>
+                        </div>
+                        <i class="fas fa-file-alt text-gray-600 text-xl"></i>
+                    </div>
+                </div>
+
+                 <!-- Pub 4 -->
+                 <div class="bg-gray-800 p-6 rounded-lg hover:bg-gray-750 transition border-l-4 border-orange-500">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <span class="text-xs font-bold bg-orange-900 text-orange-200 px-2 py-1 rounded mb-3 inline-block">EUSIPCO 2025</span>
+                            <h3 class="text-lg font-bold mb-2">Radio propagation as a service: Raytracing-based channel simulation from camera data</h3>
+                            <p class="text-sm text-gray-400 mb-2">S Sharifipour, T Määttä, N Vaara, P Sangi, L Huynh, J Mustaniemi, M Bordallo López</p>
+                        </div>
+                        <i class="fas fa-file-alt text-gray-600 text-xl"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 text-center md:hidden">
+                 <a href="#" class="text-oulu hover:text-white transition font-semibold">View Google Scholar <i class="fas fa-arrow-right ml-2"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-6 md:mb-0">
+                <h3 class="text-2xl font-bold text-white">Multimodal Sensing Lab</h3>
+                <p class="text-gray-500">University of Oulu, Finland</p>
+            </div>
+            <div class="flex space-x-6">
+                <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        <div class="text-center mt-8 text-gray-600 text-sm">
+            &copy; 2025 Miguel Bordallo López. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
